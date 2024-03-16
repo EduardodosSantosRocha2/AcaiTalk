@@ -50,9 +50,9 @@
                   <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                   <Component id="salvar" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="134" max="-2" attributes="0"/>
-                  <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Atualizar" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="140" max="32767" attributes="0"/>
-                  <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                  <Component id="eliminar" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="152" max="-2" attributes="0"/>
                   <Component id="limpar" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
@@ -80,7 +80,7 @@
                                   <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="txtCPF" max="32767" attributes="0"/>
-                                      <Component id="txtNome" max="32767" attributes="0"/>
+                                      <Component id="txtNome1" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" attributes="0">
@@ -95,6 +95,10 @@
                                   </Group>
                               </Group>
                           </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="id" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="txtID" min="-2" pref="277" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -108,7 +112,9 @@
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtNome" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtID" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="id" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtNome1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -133,8 +139,8 @@
                   <EmptySpace pref="8" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="limpar" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="eliminar" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Atualizar" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="salvar" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -151,20 +157,20 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="limparActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="eliminar">
           <Properties>
             <Property name="text" type="java.lang.String" value="ELIMINAR"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="eliminarActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton3">
+        <Component class="javax.swing.JButton" name="Atualizar">
           <Properties>
             <Property name="text" type="java.lang.String" value="ATUALIZAR"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AtualizarActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="salvar">
@@ -188,6 +194,9 @@
                   <Table columnCount="0" rowCount="4"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tbFuncionarioMouseClicked"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -231,8 +240,9 @@
             <Property name="text" type="java.lang.String" value="Numero telefone:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtNome">
+        <Component class="javax.swing.JTextField" name="txtID">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="0"/>
             </Property>
@@ -260,6 +270,21 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtCPF">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="14" style="0"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="id">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="ID:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtNome1">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="0"/>

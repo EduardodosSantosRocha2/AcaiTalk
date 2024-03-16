@@ -23,6 +23,8 @@ public class CadastroFuncionario extends javax.swing.JFrame {
         Conexion.concetarFirebase();
         initComponents();
         this.setLocationRelativeTo(null);
+        FuncionarioProvider.carregarTabelaFuncionario(tbFuncionario);
+        txtID.setEnabled(false);
     }
 
     /**
@@ -36,8 +38,8 @@ public class CadastroFuncionario extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         limpar = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        eliminar = new javax.swing.JButton();
+        Atualizar = new javax.swing.JButton();
         salvar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbFuncionario = new javax.swing.JTable();
@@ -46,11 +48,13 @@ public class CadastroFuncionario extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        txtNome = new javax.swing.JTextField();
+        txtID = new javax.swing.JTextField();
         txtIdade = new javax.swing.JTextField();
         txtEmail = new javax.swing.JTextField();
         txtNumeroTelefone = new javax.swing.JTextField();
         txtCPF = new javax.swing.JTextField();
+        id = new javax.swing.JLabel();
+        txtNome1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -61,17 +65,17 @@ public class CadastroFuncionario extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("ELIMINAR");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        eliminar.setText("ELIMINAR");
+        eliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                eliminarActionPerformed(evt);
             }
         });
 
-        jButton3.setText("ATUALIZAR");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        Atualizar.setText("ATUALIZAR");
+        Atualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                AtualizarActionPerformed(evt);
             }
         });
 
@@ -93,6 +97,11 @@ public class CadastroFuncionario extends javax.swing.JFrame {
 
             }
         ));
+        tbFuncionario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tbFuncionarioMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(tbFuncionario);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -110,7 +119,8 @@ public class CadastroFuncionario extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel5.setText("Numero telefone:");
 
-        txtNome.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtID.setEditable(false);
+        txtID.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
         txtIdade.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
@@ -120,6 +130,11 @@ public class CadastroFuncionario extends javax.swing.JFrame {
 
         txtCPF.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
+        id.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        id.setText("ID:");
+
+        txtNome1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -128,9 +143,9 @@ public class CadastroFuncionario extends javax.swing.JFrame {
                 .addGap(51, 51, 51)
                 .addComponent(salvar)
                 .addGap(134, 134, 134)
-                .addComponent(jButton3)
+                .addComponent(Atualizar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 140, Short.MAX_VALUE)
-                .addComponent(jButton2)
+                .addComponent(eliminar)
                 .addGap(152, 152, 152)
                 .addComponent(limpar)
                 .addGap(76, 76, 76))
@@ -154,7 +169,7 @@ public class CadastroFuncionario extends javax.swing.JFrame {
                                 .addGap(24, 24, 24)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(txtCPF)
-                                    .addComponent(txtNome)))
+                                    .addComponent(txtNome1)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel4)
@@ -163,6 +178,10 @@ public class CadastroFuncionario extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(txtEmail)
                                     .addComponent(txtIdade))))
+                        .addGap(18, 18, 18)
+                        .addComponent(id)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -172,7 +191,9 @@ public class CadastroFuncionario extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(id)
+                    .addComponent(txtNome1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
@@ -192,8 +213,8 @@ public class CadastroFuncionario extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(limpar)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3)
+                    .addComponent(eliminar)
+                    .addComponent(Atualizar)
                     .addComponent(salvar))
                 .addContainerGap())
         );
@@ -218,13 +239,13 @@ public class CadastroFuncionario extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarActionPerformed
+        eliminar();
+    }//GEN-LAST:event_eliminarActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void AtualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AtualizarActionPerformed
+       atualizar();
+    }//GEN-LAST:event_AtualizarActionPerformed
 
     private void salvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salvarActionPerformed
         guardar();
@@ -233,6 +254,16 @@ public class CadastroFuncionario extends javax.swing.JFrame {
     private void limparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limparActionPerformed
         limpar();
     }//GEN-LAST:event_limparActionPerformed
+
+    private void tbFuncionarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbFuncionarioMouseClicked
+        int select = tbFuncionario.getSelectedRow();
+        txtID.setText(tbFuncionario.getValueAt(select,0) + "");
+        txtNome1.setText(tbFuncionario.getValueAt(select,1) + "");
+        txtCPF.setText(tbFuncionario.getValueAt(select,2) + "");
+        txtIdade.setText(tbFuncionario.getValueAt(select,3) + "");
+        txtEmail.setText(tbFuncionario.getValueAt(select,4) + "");
+        txtNumeroTelefone.setText(tbFuncionario.getValueAt(select,5) + "");
+    }//GEN-LAST:event_tbFuncionarioMouseClicked
 
     /**
      * @param args the command line arguments
@@ -270,8 +301,9 @@ public class CadastroFuncionario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton Atualizar;
+    private javax.swing.JButton eliminar;
+    private javax.swing.JLabel id;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -284,8 +316,9 @@ public class CadastroFuncionario extends javax.swing.JFrame {
     private javax.swing.JTable tbFuncionario;
     private javax.swing.JTextField txtCPF;
     private javax.swing.JTextField txtEmail;
+    private javax.swing.JTextField txtID;
     private javax.swing.JTextField txtIdade;
-    private javax.swing.JTextField txtNome;
+    private javax.swing.JTextField txtNome1;
     private javax.swing.JTextField txtNumeroTelefone;
     // End of variables declaration//GEN-END:variables
 
@@ -296,9 +329,9 @@ public class CadastroFuncionario extends javax.swing.JFrame {
             int id = (int) (Math.random() * 10000000);
             Map<String, Object> dados = new HashMap<>();
             
-            dados.put("Nome",txtNome.getText() );
+            dados.put("Nome",txtID.getText() );
             dados.put("CPF",txtCPF.getText());
-            dados.put("Idade",Integer.parseInt(txtIdade.getText()));
+            dados.put("Idade",Double.valueOf(txtIdade.getText()));
             dados.put("Email",txtEmail.getText() );
             dados.put("Numero Telefone",txtNumeroTelefone.getText() );
             FuncionarioProvider.salvarFuncionario("Funcionario",String.valueOf(id), dados);
@@ -306,11 +339,50 @@ public class CadastroFuncionario extends javax.swing.JFrame {
         }catch(HeadlessException e){
             System.err.println("Erro: " + e.getMessage());
             JOptionPane.showMessageDialog(null, "Erro ao salvo!");
+        }finally{
+            FuncionarioProvider.carregarTabelaFuncionario(tbFuncionario);
         }
     }
 
+    
+
+    private void atualizar() {
+         String idDoc = txtID.getText();
+        try{   
+            System.out.println(idDoc);
+            Map<String, Object> dados = new HashMap<>();           
+            dados.put("Nome",txtNome1.getText() );
+            dados.put("CPF",txtCPF.getText());
+            dados.put("Idade",Double.valueOf(txtIdade.getText()));
+            dados.put("Email",txtEmail.getText() );
+            dados.put("Numero Telefone",txtNumeroTelefone.getText() );
+            FuncionarioProvider.atualizarFuncionario("Funcionario",idDoc, dados);
+            JOptionPane.showMessageDialog(null, "Atualizado com sucesso!");
+        }catch(HeadlessException e){
+            System.err.println("Erro: " + e.getMessage());
+            JOptionPane.showMessageDialog(null, "Erro ao atualizar!");
+        }finally{
+            FuncionarioProvider.carregarTabelaFuncionario(tbFuncionario);
+        }
+    }
+    
+    
+
+    private void eliminar() {
+        try{
+            String idDoc = txtID.getText();      
+            FuncionarioProvider.eliminarFuncionario("Funcionario",idDoc);
+            JOptionPane.showMessageDialog(null, "Eliminado com sucesso!");
+        }catch(HeadlessException e){
+            System.err.println("Erro: " + e.getMessage());
+            JOptionPane.showMessageDialog(null, "Erro ao atualizar!");
+        }finally{
+            FuncionarioProvider.carregarTabelaFuncionario(tbFuncionario);
+        }
+    }
+    
     private void limpar() {
-       txtNome.setText("");
+       txtID.setText("");
        txtCPF.setText("");
        txtIdade.setText("");
        txtEmail.setText("");
