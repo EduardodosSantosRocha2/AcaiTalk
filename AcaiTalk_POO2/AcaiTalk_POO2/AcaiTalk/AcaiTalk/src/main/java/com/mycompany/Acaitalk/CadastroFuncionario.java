@@ -329,7 +329,7 @@ public class CadastroFuncionario extends javax.swing.JFrame {
             int id = (int) (Math.random() * 10000000);
             Map<String, Object> dados = new HashMap<>();
             
-            dados.put("Nome",txtID.getText() );
+            dados.put("Nome",txtNome1.getText() );
             dados.put("CPF",txtCPF.getText());
             dados.put("Idade",Double.valueOf(txtIdade.getText()));
             dados.put("Email",txtEmail.getText() );

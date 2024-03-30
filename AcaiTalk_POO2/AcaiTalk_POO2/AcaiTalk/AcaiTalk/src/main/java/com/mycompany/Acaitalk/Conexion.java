@@ -12,7 +12,7 @@ public class Conexion {
     public static com.google.cloud.firestore.Firestore db;
 
     public static void concetarFirebase() {
-        try (FileInputStream coffeeTalkToken = new FileInputStream("coffeetalk.json")) {
+        try (FileInputStream coffeeTalkToken = new FileInputStream("acaitalk.json")) {
             FirebaseOptions options = FirebaseOptions.builder()
                 .setCredentials(GoogleCredentials.fromStream(coffeeTalkToken))
                 .build();
