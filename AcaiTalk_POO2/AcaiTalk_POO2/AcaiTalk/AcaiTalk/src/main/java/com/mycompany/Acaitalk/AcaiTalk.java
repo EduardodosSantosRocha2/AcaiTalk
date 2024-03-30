@@ -1,5 +1,15 @@
 package com.mycompany.Acaitalk;
 
+import com.mycompany.Acaitalk.Template.TemplateAcai;
+import com.mycompany.Acaitalk.Firebase.Conexion;
+import com.mycompany.Acaitalk.Observer.Instagram;
+import com.mycompany.Acaitalk.Decorator.Fruit;
+import com.mycompany.Acaitalk.Decorator.Complement;
+import com.mycompany.Acaitalk.Observer.EventoComemorativo;
+import com.mycompany.Acaitalk.Observer.Subject;
+import com.mycompany.Acaitalk.Observer.Observer;
+import com.mycompany.Acaitalk.Factory.IAcaiMaker;
+import com.mycompany.Acaitalk.Singleton.IAcaiMakerSingleton;
 import com.mycompany.Acaitalk.Excel.Devedores;
 import com.mycompany.Acaitalk.Excel.LerArquivoExcel;
 import com.mycompany.Acaitalk.Excel.PrintArquivoExcel;
