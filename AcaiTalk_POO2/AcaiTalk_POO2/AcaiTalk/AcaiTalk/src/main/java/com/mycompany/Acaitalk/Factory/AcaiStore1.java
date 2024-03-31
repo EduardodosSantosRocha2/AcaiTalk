@@ -4,7 +4,7 @@ import com.mycompany.Acaitalk.AcaiExtraLarge;
 import com.mycompany.Acaitalk.AcaiLarge;
 import com.mycompany.Acaitalk.AcaiMedium;
 import com.mycompany.Acaitalk.AcaiSmall;
-import com.mycompany.Acaitalk.IAcai;
+import com.mycompany.Acaitalk.Decorator.IAcai;
 
 public class AcaiStore1 implements IAcaiMaker{
 

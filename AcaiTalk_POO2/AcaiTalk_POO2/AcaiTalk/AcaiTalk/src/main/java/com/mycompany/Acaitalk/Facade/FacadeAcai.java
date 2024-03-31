@@ -1,12 +1,14 @@
-package com.mycompany.Acaitalk.Template;
+package com.mycompany.Acaitalk.Facade;
 
-import com.mycompany.Acaitalk.IAcai;
+import com.mycompany.Acaitalk.Decorator.IAcai;
 
-public class TemplateAcai {
+public class FacadeAcai {
     
     IAcai acai;
-    public TemplateAcai(IAcai acai){
+    
+    public FacadeAcai(IAcai acai){
         this.acai = acai;
+       
     }
     
     public void execute(){

@@ -1,23 +1,21 @@
 package com.mycompany.Acaitalk.Decorator;
 
-import com.mycompany.Acaitalk.IAcai;
-
 public class AcaiDecorator implements IAcai{
     
     IAcai acai;
-
     public AcaiDecorator(IAcai acai) {
         this.acai = acai;
+        
     }
 
     @Override
     public void make() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        System.out.println("acai being made"); 
     }
 
     @Override
     public void pack() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        System.out.println("the product was packed"); 
     }
 
     @Override

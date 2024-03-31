@@ -1,5 +1,7 @@
 package com.mycompany.Acaitalk;
 
+import com.mycompany.Acaitalk.Decorator.IAcai;
+
 public class AcaiSmall implements IAcai{
 
     @Override

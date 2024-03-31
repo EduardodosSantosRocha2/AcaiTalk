@@ -1,25 +1,28 @@
 package com.mycompany.Acaitalk;
 
+import com.mycompany.Acaitalk.Decorator.IAcai;
+
 public class AcaiExtraLarge implements IAcai{
 
+    
     @Override
     public void make() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        System.out.println("Extra large acai being made");
     }
 
     @Override
     public void pack() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        System.out.println("the product was packed"); 
     }
 
     @Override
     public double price() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+         return 20.0;
     }
 
     @Override
     public String getDesc() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return "Extra large acai";
     }
     
 }

@@ -1,4 +1,4 @@
-package com.mycompany.Acaitalk;
+package com.mycompany.Acaitalk.Decorator;
 
 public interface IAcai {
     void make();
