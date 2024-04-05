@@ -7,12 +7,12 @@ public class AcaiMedium implements IAcai{
     
     @Override
     public void make() {
-        System.out.println("Medium acai being made");
+        System.out.println("Açaí médio sendo feito!");
     }
 
     @Override
     public void pack() {
-        System.out.println("the product was packed"); 
+         System.out.println("O produto está embalado!");
     }
 
     @Override
@@ -22,7 +22,7 @@ public class AcaiMedium implements IAcai{
 
     @Override
     public String getDesc() {
-        return "Medium acai";
+        return "Açai do tipo medium.";
     }
     
 }

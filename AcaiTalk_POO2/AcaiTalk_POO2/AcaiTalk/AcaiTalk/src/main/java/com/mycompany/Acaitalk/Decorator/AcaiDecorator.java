@@ -3,6 +3,7 @@ package com.mycompany.Acaitalk.Decorator;
 public class AcaiDecorator implements IAcai{
     
     IAcai acai;
+    String additional;
     public AcaiDecorator(IAcai acai) {
         this.acai = acai;
         
@@ -10,12 +11,12 @@ public class AcaiDecorator implements IAcai{
 
     @Override
     public void make() {
-        System.out.println("acai being made"); 
+        System.out.println("Açaí sendo feito!"); 
     }
 
     @Override
     public void pack() {
-        System.out.println("the product was packed"); 
+        System.out.println("O produto está embalado!");  
     }
 
     @Override

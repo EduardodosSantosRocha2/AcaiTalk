@@ -26,17 +26,17 @@ public class AcaiTalk {
 
     public static void main(String[] args) throws IOException {
         Conexion.concetarFirebase();
-        IAcaiMakerSingleton singleton  = new IAcaiMakerSingleton();
-        IAcaiMaker acaiStore1 = singleton.getInstance("acaiStore1");
-        IAcai small = acaiStore1.makeAcai("small");
-        FacadeAcai facadeAcai  = new FacadeAcai(small);
-        facadeAcai.ReadyRequest();
+        //IAcaiMakerSingleton singleton  = new IAcaiMakerSingleton();
+        //IAcaiMaker acaiStore1 = singleton.getInstance("acaiStore1");
+        //IAcai small = acaiStore1.makeAcai("small");
+        //FacadeAcai facadeAcai  = new FacadeAcai(small);
+        //facadeAcai.ReadyRequest();
 
-        small = new Complement(new Fruit(new Fruit(new SweetSauce(small))));
+        //small = new Complement(new Fruit(new Fruit(new SweetSauce(small))));
        
         
-        System.out.println(small.price());
-        System.out.println(small.getDesc());
+        //System.out.println(small.price());
+        //System.out.println(small.getDesc());
         //Subject eventoComemorativo = new EventoComemorativo();
         //Observer instagram = new Instagram();
         //eventoComemorativo.addObserver(instagram);

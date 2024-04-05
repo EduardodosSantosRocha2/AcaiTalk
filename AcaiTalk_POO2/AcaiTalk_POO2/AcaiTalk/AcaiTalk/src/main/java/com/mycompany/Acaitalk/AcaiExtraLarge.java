@@ -7,12 +7,12 @@ public class AcaiExtraLarge implements IAcai{
     
     @Override
     public void make() {
-        System.out.println("Extra large acai being made");
+        System.out.println("Açaí extra grande sendo feito!");
     }
 
     @Override
     public void pack() {
-        System.out.println("the product was packed"); 
+        System.out.println("O produto está embalado!"); 
     }
 
     @Override
@@ -22,7 +22,7 @@ public class AcaiExtraLarge implements IAcai{
 
     @Override
     public String getDesc() {
-        return "Extra large acai";
+        return "Açai do tipo extra large.";
     }
     
 }

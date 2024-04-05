@@ -61,72 +61,74 @@
                   <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="165" max="-2" attributes="0"/>
+                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="1" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <Component id="jCheckBoxBanana" min="-2" pref="93" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jCheckBoxFrutaVermelhas" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
-                                              <Component id="jCheckBoxMel" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
-                                                  <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jRadioButtonPequeno" alignment="0" min="-2" pref="136" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <Component id="jCheckBoxBanana" min="-2" pref="93" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
                                               </Group>
-                                              <Component id="jCheckBoxChocolate" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
-                                              <Component id="jCheckBoxCaramelo" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
-                                              <Component id="jCheckBoxLeiteCondensado" min="-2" max="-2" attributes="0"/>
+                                              <Group type="102" attributes="0">
+                                                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                                              </Group>
                                           </Group>
-                                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jCheckBoxLeiteCondensado" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jCheckBoxMel" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
+                                              <Component id="jCheckBoxChocolate" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
+                                              <Component id="jCheckBoxFrutaVermelhas" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jCheckBoxCaramelo" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
+                                          </Group>
                                       </Group>
-                                      <Group type="102" attributes="0">
-                                          <Component id="jRadioButtonGrande" min="-2" pref="110" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="145" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Component id="jRadioButtonPequeno" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
+                                      <Component id="jRadioButtonGrande" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" attributes="0">
                                           <EmptySpace min="28" pref="28" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jCheckBoxGranola" min="-2" pref="93" max="-2" attributes="0"/>
-                                              <Component id="jCheckBoxConfeti" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
-                                              <Component id="jCheckBoxGostasChocolate" min="-2" pref="109" max="-2" attributes="0"/>
-                                              <Component id="jLabel7" min="-2" pref="182" max="-2" attributes="0"/>
-                                              <Component id="jRadioButtonExtraGrande" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
-                                              <Component id="jRadioButtonMedio" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
+                                              <Component id="jRadioButtonMedio" min="-2" pref="129" max="-2" attributes="0"/>
+                                              <Component id="jRadioButtonExtraGrande" min="-2" pref="157" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Component id="jCheckBoxPacoca" min="-2" pref="100" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jCheckBoxGranola" min="-2" pref="93" max="-2" attributes="0"/>
+                                              <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jCheckBoxLeiteNinho" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                                              <Component id="jCheckBoxPacoca" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                                              <Component id="jCheckBoxConfeti" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
+                                              <Component id="jCheckBoxGostasChocolate" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
                                       </Group>
                                   </Group>
                               </Group>
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
-                                  <Component id="jLabel2" min="-2" pref="93" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                  <Component id="jCheckBoxLeiteNinho" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="jCheckBoxManga" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
-                                          <Component id="jCheckBoxAbacaxi" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
-                                          <Component id="jCheckBoxKiwi" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
-                                          <Component id="jCheckBoxMorango" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="290" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Component id="enviar" alignment="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="enviar" alignment="0" min="-2" pref="465" max="-2" attributes="0"/>
+                              <Component id="jCheckBoxManga" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
+                              <Component id="jCheckBoxAbacaxi" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
+                              <Component id="jCheckBoxKiwi" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
+                              <Component id="jCheckBoxMorango" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
+                              <Component id="jLabel4" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="165" max="-2" attributes="0"/>
-                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                          <Component id="jLabel3" min="-2" pref="129" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jTextFieldPrice" min="-2" pref="120" max="-2" attributes="0"/>
+                              <Component id="jScrollPane1" min="-2" pref="703" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
@@ -142,7 +144,10 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+              <Group type="102" attributes="0">
+                  <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              </Group>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
                   <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
@@ -152,9 +157,9 @@
                       <Component id="jRadioButtonPequeno" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jRadioButtonGrande" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jRadioButtonExtraGrande" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jRadioButtonGrande" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRadioButtonExtraGrande" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -163,13 +168,29 @@
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jCheckBoxMorango" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jCheckBoxBanana" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jCheckBoxBanana" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBoxMel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBoxLeiteNinho" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jCheckBoxKiwi" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jCheckBoxKiwi" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBoxFrutaVermelhas" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBoxPacoca" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jCheckBoxManga" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jCheckBoxManga" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBoxChocolate" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBoxGostasChocolate" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jCheckBoxAbacaxi" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jCheckBoxAbacaxi" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBoxCaramelo" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBoxConfeti" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -178,33 +199,27 @@
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jCheckBoxGranola" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBoxLeiteCondensado" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jCheckBoxMel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBoxLeiteNinho" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jCheckBoxFrutaVermelhas" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBoxPacoca" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jCheckBoxChocolate" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBoxGostasChocolate" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jCheckBoxConfeti" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBoxCaramelo" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBoxLeiteCondensado" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBoxGranola" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
+                  <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jTextFieldPrice" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Component id="enviar" min="-2" pref="50" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               </Group>
               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
@@ -240,8 +255,12 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="buttonGroup2"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Pequeno"/>
+            <Property name="selected" type="boolean" value="true"/>
+            <Property name="text" type="java.lang.String" value="Pequeno R$10,00"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButtonPequenoActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="jRadioButtonGrande">
           <Properties>
@@ -251,7 +270,7 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="buttonGroup2"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Grande"/>
+            <Property name="text" type="java.lang.String" value="Grande R$15,00"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JRadioButton" name="jRadioButtonMedio">
@@ -262,7 +281,7 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="buttonGroup2"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Medio"/>
+            <Property name="text" type="java.lang.String" value="Medio R$12,00"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JRadioButton" name="jRadioButtonExtraGrande">
@@ -273,7 +292,7 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="buttonGroup2"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Extra Grande"/>
+            <Property name="text" type="java.lang.String" value="Extra Grande R$20,00"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JCheckBox" name="jCheckBoxMorango">
@@ -351,7 +370,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Dialog" size="12" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Frutas Ver."/>
+            <Property name="text" type="java.lang.String" value="Frutas Vermelhas"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
@@ -362,7 +381,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Dialog" size="24" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Frutas"/>
+            <Property name="text" type="java.lang.String" value="Frutas R$:4,00"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel5">
@@ -384,7 +403,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Dialog" size="24" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Calda"/>
+            <Property name="text" type="java.lang.String" value="Calda R$5,00"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel7">
@@ -395,7 +414,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Dialog" size="24" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Complementos"/>
+            <Property name="text" type="java.lang.String" value="Complementos RS6,00"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JCheckBox" name="jCheckBoxChocolate">
@@ -430,6 +449,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Leite Cond."/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBoxLeiteCondensadoActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="jCheckBoxGranola">
           <Properties>
@@ -483,7 +505,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Dialog" size="12" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Gotas Choc."/>
+            <Property name="text" type="java.lang.String" value="Gotas Chocholate"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jButton1">
@@ -511,6 +533,52 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="enviarActionPerformed"/>
           </Events>
         </Component>
+        <Component class="javax.swing.JLabel" name="jLabel3">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Dialog" size="24" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Descri&#xe7;&#xe3;o: "/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel4">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Dialog" size="24" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Valor: "/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTextFieldPrice">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldPriceActionPerformed"/>
+          </Events>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextArea" name="jTextAreaDescription">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+                <Property name="columns" type="int" value="20"/>
+                <Property name="rows" type="int" value="5"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
       </SubComponents>
     </Container>
   </SubComponents>

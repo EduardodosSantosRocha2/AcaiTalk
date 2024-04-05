@@ -4,22 +4,24 @@ public class Acai implements IAcai{
 
     @Override
     public void make() {
-        
+        System.out.println("Açaí sendo feito!");
     }
 
     @Override
     public void pack() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        System.out.println("O produto está embalado!");
     }
 
     @Override
     public double price() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        
+        return 0;
+        
     }
 
     @Override
     public String getDesc() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return "Açai normal";
     }
     
 }

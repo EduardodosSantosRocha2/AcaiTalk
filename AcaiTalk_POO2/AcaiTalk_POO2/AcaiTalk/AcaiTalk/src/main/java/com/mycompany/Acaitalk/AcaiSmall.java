@@ -6,12 +6,12 @@ public class AcaiSmall implements IAcai{
 
     @Override
     public void make() {
-        System.out.println("Small acai being made");
+        System.out.println("Açaí pequeno sendo feito!");
     }
 
     @Override
     public void pack() {
-        System.out.println("the product was packed"); 
+        System.out.println("O produto está embalado!");
     }
 
     @Override
@@ -21,7 +21,7 @@ public class AcaiSmall implements IAcai{
 
     @Override
     public String getDesc() {
-        return "small acai";
+        return "Açai do tipo small.";
     }
     
 }

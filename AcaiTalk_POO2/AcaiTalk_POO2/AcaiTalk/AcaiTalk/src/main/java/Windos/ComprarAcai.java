@@ -11,18 +11,25 @@ import com.mycompany.Acaitalk.Decorator.SweetSauce;
 import com.mycompany.Acaitalk.Facade.FacadeAcai;
 import com.mycompany.Acaitalk.Factory.IAcaiMaker;
 import com.mycompany.Acaitalk.Singleton.IAcaiMakerSingleton;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import javax.swing.*;
 
 /**
  *
  * @author guilh
  */
-public class NewJFrame1 extends javax.swing.JFrame {
+public class ComprarAcai extends javax.swing.JFrame {
+    
 
-    public NewJFrame1() {
+    public ComprarAcai() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        
     }
-
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -55,6 +62,11 @@ public class NewJFrame1 extends javax.swing.JFrame {
         jCheckBoxGostasChocolate = new javax.swing.JCheckBox();
         jButton1 = new javax.swing.JButton();
         enviar = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jTextFieldPrice = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextAreaDescription = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
@@ -74,19 +86,25 @@ public class NewJFrame1 extends javax.swing.JFrame {
 
         jRadioButtonPequeno.setBackground(new java.awt.Color(253, 226, 195));
         buttonGroup2.add(jRadioButtonPequeno);
-        jRadioButtonPequeno.setText("Pequeno");
+        jRadioButtonPequeno.setSelected(true);
+        jRadioButtonPequeno.setText("Pequeno R$10,00");
+        jRadioButtonPequeno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonPequenoActionPerformed(evt);
+            }
+        });
 
         jRadioButtonGrande.setBackground(new java.awt.Color(253, 226, 195));
         buttonGroup2.add(jRadioButtonGrande);
-        jRadioButtonGrande.setText("Grande");
+        jRadioButtonGrande.setText("Grande R$15,00");
 
         jRadioButtonMedio.setBackground(new java.awt.Color(253, 226, 195));
         buttonGroup2.add(jRadioButtonMedio);
-        jRadioButtonMedio.setText("Medio");
+        jRadioButtonMedio.setText("Medio R$12,00");
 
         jRadioButtonExtraGrande.setBackground(new java.awt.Color(253, 226, 195));
         buttonGroup2.add(jRadioButtonExtraGrande);
-        jRadioButtonExtraGrande.setText("Extra Grande");
+        jRadioButtonExtraGrande.setText("Extra Grande R$20,00");
 
         jCheckBoxMorango.setBackground(new java.awt.Color(253, 226, 195));
         jCheckBoxMorango.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
@@ -115,11 +133,11 @@ public class NewJFrame1 extends javax.swing.JFrame {
 
         jCheckBoxFrutaVermelhas.setBackground(new java.awt.Color(253, 226, 195));
         jCheckBoxFrutaVermelhas.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        jCheckBoxFrutaVermelhas.setText("Frutas Ver.");
+        jCheckBoxFrutaVermelhas.setText("Frutas Vermelhas");
 
         jLabel2.setBackground(new java.awt.Color(0, 0, 0));
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jLabel2.setText("Frutas");
+        jLabel2.setText("Frutas R$:4,00");
 
         jLabel5.setBackground(new java.awt.Color(0, 0, 0));
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
@@ -127,11 +145,11 @@ public class NewJFrame1 extends javax.swing.JFrame {
 
         jLabel6.setBackground(new java.awt.Color(0, 0, 0));
         jLabel6.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jLabel6.setText("Calda");
+        jLabel6.setText("Calda R$5,00");
 
         jLabel7.setBackground(new java.awt.Color(0, 0, 0));
         jLabel7.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jLabel7.setText("Complementos");
+        jLabel7.setText("Complementos RS6,00");
 
         jCheckBoxChocolate.setBackground(new java.awt.Color(253, 226, 195));
         jCheckBoxChocolate.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
@@ -144,6 +162,11 @@ public class NewJFrame1 extends javax.swing.JFrame {
         jCheckBoxLeiteCondensado.setBackground(new java.awt.Color(253, 226, 195));
         jCheckBoxLeiteCondensado.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jCheckBoxLeiteCondensado.setText("Leite Cond.");
+        jCheckBoxLeiteCondensado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxLeiteCondensadoActionPerformed(evt);
+            }
+        });
 
         jCheckBoxGranola.setBackground(new java.awt.Color(253, 226, 195));
         jCheckBoxGranola.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
@@ -163,7 +186,7 @@ public class NewJFrame1 extends javax.swing.JFrame {
 
         jCheckBoxGostasChocolate.setBackground(new java.awt.Color(253, 226, 195));
         jCheckBoxGostasChocolate.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        jCheckBoxGostasChocolate.setText("Gotas Choc.");
+        jCheckBoxGostasChocolate.setText("Gotas Chocholate");
 
         jButton1.setText("Realizar Pedido");
         jButton1.setMaximumSize(new java.awt.Dimension(843, 233));
@@ -178,6 +201,26 @@ public class NewJFrame1 extends javax.swing.JFrame {
             }
         });
 
+        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel3.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        jLabel3.setText("Descrição: ");
+
+        jLabel4.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel4.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        jLabel4.setText("Valor: ");
+
+        jTextFieldPrice.setEditable(false);
+        jTextFieldPrice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldPriceActionPerformed(evt);
+            }
+        });
+
+        jTextAreaDescription.setEditable(false);
+        jTextAreaDescription.setColumns(20);
+        jTextAreaDescription.setRows(5);
+        jScrollPane1.setViewportView(jTextAreaDescription);
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -187,56 +230,58 @@ public class NewJFrame1 extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(165, 165, 165)
+                        .addComponent(jLabel5))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(38, 38, 38)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jRadioButtonPequeno, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jCheckBoxBanana, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(43, 43, 43)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jCheckBoxFrutaVermelhas, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jCheckBoxMel, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addGap(9, 9, 9)
-                                                .addComponent(jLabel6))
+                                                .addComponent(jCheckBoxBanana, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(124, 124, 124))
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addComponent(jLabel2)
+                                                .addGap(55, 55, 55)))
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jCheckBoxLeiteCondensado)
+                                            .addComponent(jLabel6)
+                                            .addComponent(jCheckBoxMel, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jCheckBoxChocolate, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jCheckBoxCaramelo, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jCheckBoxLeiteCondensado))
-                                        .addGap(25, 25, 25))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jRadioButtonGrande, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(145, 145, 145))
-                                    .addComponent(jRadioButtonPequeno, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jCheckBoxFrutaVermelhas)
+                                            .addComponent(jCheckBoxCaramelo, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(jRadioButtonGrande, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(28, 28, 28)
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jRadioButtonMedio, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jRadioButtonExtraGrande, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(88, 88, 88)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jCheckBoxGranola, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel7)
+                                            .addComponent(jCheckBoxLeiteNinho, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jCheckBoxPacoca, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jCheckBoxConfeti, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jCheckBoxGostasChocolate, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jRadioButtonExtraGrande, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jRadioButtonMedio, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jCheckBoxPacoca, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(82, 82, 82))))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(9, 9, 9)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jCheckBoxLeiteNinho, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jCheckBoxManga, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jCheckBoxAbacaxi, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jCheckBoxKiwi, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jCheckBoxMorango, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGap(290, 290, 290)))
-                            .addComponent(enviar, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                                            .addComponent(jCheckBoxGostasChocolate)))))
+                            .addComponent(enviar, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCheckBoxManga, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCheckBoxAbacaxi, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCheckBoxKiwi, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCheckBoxMorango, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(165, 165, 165)
-                        .addComponent(jLabel5)))
+                        .addGap(32, 32, 32)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextFieldPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 703, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
@@ -246,7 +291,9 @@ public class NewJFrame1 extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(86, 86, 86)
                 .addComponent(jLabel5)
@@ -255,7 +302,7 @@ public class NewJFrame1 extends javax.swing.JFrame {
                     .addComponent(jRadioButtonMedio, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jRadioButtonPequeno))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jRadioButtonGrande)
                     .addComponent(jRadioButtonExtraGrande))
                 .addGap(44, 44, 44)
@@ -265,39 +312,46 @@ public class NewJFrame1 extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jCheckBoxMorango)
                         .addGap(18, 18, 18)
-                        .addComponent(jCheckBoxBanana)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jCheckBoxBanana)
+                            .addComponent(jCheckBoxMel)
+                            .addComponent(jCheckBoxLeiteNinho))
                         .addGap(18, 18, 18)
-                        .addComponent(jCheckBoxKiwi)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jCheckBoxKiwi)
+                            .addComponent(jCheckBoxFrutaVermelhas)
+                            .addComponent(jCheckBoxPacoca))
                         .addGap(18, 18, 18)
-                        .addComponent(jCheckBoxManga)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jCheckBoxManga)
+                            .addComponent(jCheckBoxChocolate)
+                            .addComponent(jCheckBoxGostasChocolate))
                         .addGap(18, 18, 18)
-                        .addComponent(jCheckBoxAbacaxi))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jCheckBoxAbacaxi)
+                            .addComponent(jCheckBoxCaramelo)
+                            .addComponent(jCheckBoxConfeti)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel6)
                             .addComponent(jLabel7))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBoxGranola, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jCheckBoxLeiteCondensado))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jCheckBoxMel)
-                            .addComponent(jCheckBoxLeiteNinho))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jCheckBoxFrutaVermelhas)
-                            .addComponent(jCheckBoxPacoca))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jCheckBoxChocolate)
-                            .addComponent(jCheckBoxGostasChocolate))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBoxConfeti)
-                            .addComponent(jCheckBoxCaramelo))))
+                            .addComponent(jCheckBoxLeiteCondensado)
+                            .addComponent(jCheckBoxGranola))))
+                .addGap(44, 44, 44)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(jTextFieldPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(enviar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addComponent(jLabel3)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(enviar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(372, 372, 372)
@@ -327,6 +381,18 @@ public class NewJFrame1 extends javax.swing.JFrame {
         enviar();
     }//GEN-LAST:event_enviarActionPerformed
 
+    private void jTextFieldPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPriceActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldPriceActionPerformed
+
+    private void jRadioButtonPequenoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonPequenoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButtonPequenoActionPerformed
+
+    private void jCheckBoxLeiteCondensadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxLeiteCondensadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBoxLeiteCondensadoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -344,21 +410,23 @@ public class NewJFrame1 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ComprarAcai.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ComprarAcai.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ComprarAcai.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ComprarAcai.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new NewJFrame1().setVisible(true);
+                new ComprarAcai().setVisible(true);
             }
         });
     }
@@ -383,6 +451,8 @@ public class NewJFrame1 extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBoxMorango;
     private javax.swing.JCheckBox jCheckBoxPacoca;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -392,6 +462,9 @@ public class NewJFrame1 extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButtonGrande;
     private javax.swing.JRadioButton jRadioButtonMedio;
     private javax.swing.JRadioButton jRadioButtonPequeno;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextAreaDescription;
+    private javax.swing.JTextField jTextFieldPrice;
     // End of variables declaration//GEN-END:variables
 
     private void enviar() {
@@ -436,30 +509,30 @@ public class NewJFrame1 extends javax.swing.JFrame {
         }
 
         ArrayList<String> selecionados = selectCheckBox();
-
+        
         System.out.println("Selecionados:");
         for (String item : selecionados) {
 
             if (item.equals("Caramelo") || item.equals("Chocolate") || item.equals("Frutas Vermelhas") || item.equals("Leite Condensado") || item.equals("Mel")) {
                 System.out.println("calda "+ item);
                 if (cont == 0) {
-                    type = new SweetSauce(type);
+                    type = new SweetSauce(type, item);
                 }else{
-                    type = new SweetSauce(type);
+                    type = new SweetSauce(type, item);
                 }  
             }else if (item.equals("Granola") || item.equals("Paçoca") || item.equals("Confeti") || item.equals("Gotas de Chocolate") || item.equals("Leite Ninho")) {
                 System.out.println("Complemento "+ item);
                 if (cont == 0) {
-                    type = new Complement(type);
+                    type = new Complement(type, item);
                 }else{
-                    type = new Complement(type);
+                    type = new Complement(type, item);
                 }  
             }else if (item.equals("Abacaxi") || item.equals("Banana") || item.equals("Kiwi") || item.equals("Manga") || item.equals("Morango")) {
                 System.out.println("fruta "+ item);
                 if (cont == 0) {
-                    type = new Fruit(type);
+                    type = new Fruit(type, item);
                 }else{
-                    type = new Fruit(type);
+                    type = new Fruit(type,item);
                 } 
             }
 
@@ -467,8 +540,9 @@ public class NewJFrame1 extends javax.swing.JFrame {
 
         }
         
-        System.out.println(type.price());
-        System.out.println(type.getDesc());
+        
+        jTextFieldPrice.setText(""+type.price()); 
+        jTextAreaDescription.setText(""+type.getDesc().replaceAll("\\.", "\n"));
 
     }
 
@@ -486,7 +560,6 @@ public class NewJFrame1 extends javax.swing.JFrame {
         } else {
             size = "Nenhum selecionado";
         }
-
         return size;
     }
 
@@ -553,3 +626,4 @@ public class NewJFrame1 extends javax.swing.JFrame {
     }
 
 }
+

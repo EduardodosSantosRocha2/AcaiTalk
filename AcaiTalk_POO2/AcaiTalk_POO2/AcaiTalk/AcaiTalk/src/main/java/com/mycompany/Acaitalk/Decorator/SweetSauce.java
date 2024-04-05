@@ -2,17 +2,19 @@ package com.mycompany.Acaitalk.Decorator;
 
 public class SweetSauce extends AcaiDecorator{
     
-    public SweetSauce(IAcai acai) {
+    String sweetSauce;
+    public SweetSauce(IAcai acai, String sweetSauce) {
         super(acai);
+        this.sweetSauce = sweetSauce;
     }
     
     @Override
     public double price(){
-        return super.price() + 4.00;
+        return super.price() + 5.00;
     }
     
     @Override
     public String getDesc(){
-        return super.getDesc() + "frutinha adicionada!";
+        return super.getDesc() +"Calda adicionada: "+ sweetSauce + " .";
     }
 }

@@ -1,9 +1,10 @@
 package com.mycompany.Acaitalk.Decorator;
 
 public class Fruit extends AcaiDecorator{
-    
-    public Fruit(IAcai acai) {
+    private String fruit;
+    public Fruit(IAcai acai, String fruit) {
         super(acai);
+        this.fruit = fruit;    
     }
     
     @Override
@@ -13,7 +14,7 @@ public class Fruit extends AcaiDecorator{
     
     @Override
     public String getDesc(){
-        return super.getDesc() + "frutinha adicionada!";
+        return super.getDesc() + "Fruta adicionada: " + fruit +" .";
     }
     
 }

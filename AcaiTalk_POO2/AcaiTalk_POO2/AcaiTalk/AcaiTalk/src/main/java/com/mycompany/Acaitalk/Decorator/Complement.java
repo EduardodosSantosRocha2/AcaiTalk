@@ -2,8 +2,10 @@ package com.mycompany.Acaitalk.Decorator;
 
 public class Complement extends AcaiDecorator {
     
-    public Complement(IAcai acai) {
-        super(acai);
+    private String complement;
+    public Complement(IAcai acai, String complement) {  
+       super(acai);
+       this.complement = complement;     
     }
     
     @Override
@@ -13,6 +15,6 @@ public class Complement extends AcaiDecorator {
     
     @Override
     public String getDesc(){
-        return super.getDesc() + "complemento adicionada!";
+        return super.getDesc() + "Complementos adicionada: " + complement +" .";
     }
 }
