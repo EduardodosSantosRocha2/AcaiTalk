@@ -4,6 +4,8 @@
  */
 package Windos;
 
+import com.mycompany.Acaitalk.Firebase.Conexion;
+
 /**
  *
  * @author guilh
@@ -14,6 +16,7 @@ public class NewJFrame extends javax.swing.JFrame {
      * Creates new form NewJFrame
      */
     public NewJFrame() {
+        Conexion.concetarFirebase();
         initComponents();
     }
 

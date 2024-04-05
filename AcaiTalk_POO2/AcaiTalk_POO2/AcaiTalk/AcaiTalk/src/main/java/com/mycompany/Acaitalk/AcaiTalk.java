@@ -25,7 +25,7 @@ import java.util.List;
 public class AcaiTalk {
 
     public static void main(String[] args) throws IOException {
-        Conexion.concetarFirebase();
+        //Conexion.concetarFirebase();
         //IAcaiMakerSingleton singleton  = new IAcaiMakerSingleton();
         //IAcaiMaker acaiStore1 = singleton.getInstance("acaiStore1");
         //IAcai small = acaiStore1.makeAcai("small");

@@ -335,7 +335,7 @@ public class CadastroFuncionario extends javax.swing.JFrame {
             dados.put("Idade",Double.valueOf(txtIdade.getText()));
             dados.put("Email",txtEmail.getText() );
             dados.put("Numero Telefone",txtNumeroTelefone.getText() );
-            FuncionarioProvider.salvarFuncionario("Funcionario",String.valueOf(id), dados);
+            FuncionarioProvider.salvarFuncionario("Funcionario",String.valueOf(txtCPF.getText()), dados);
             JOptionPane.showMessageDialog(null, "Salvo com sucesso!");
         }catch(HeadlessException e){
             System.err.println("Erro: " + e.getMessage());
@@ -348,7 +348,7 @@ public class CadastroFuncionario extends javax.swing.JFrame {
     
 
     private void atualizar() {
-         String idDoc = txtID.getText();
+         String idDoc = txtCPF.getText();
         try{   
             System.out.println(idDoc);
             Map<String, Object> dados = new HashMap<>();           
@@ -371,7 +371,7 @@ public class CadastroFuncionario extends javax.swing.JFrame {
 
     private void eliminar() {
         try{
-            String idDoc = txtID.getText();      
+            String idDoc = txtCPF.getText();      
             FuncionarioProvider.eliminarFuncionario("Funcionario",idDoc);
             JOptionPane.showMessageDialog(null, "Eliminado com sucesso!");
         }catch(HeadlessException e){
