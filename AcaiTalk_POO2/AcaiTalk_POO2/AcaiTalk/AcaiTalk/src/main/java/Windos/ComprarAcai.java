@@ -10,11 +10,21 @@ import com.mycompany.Acaitalk.Decorator.IAcai;
 import com.mycompany.Acaitalk.Decorator.SweetSauce;
 import com.mycompany.Acaitalk.Facade.FacadeAcai;
 import com.mycompany.Acaitalk.Factory.IAcaiMaker;
+import com.mycompany.Acaitalk.Observer.EventoComemorativo;
+import com.mycompany.Acaitalk.Observer.Instagram;
+import com.mycompany.Acaitalk.Observer.Observer;
+import com.mycompany.Acaitalk.Observer.Subject;
 import com.mycompany.Acaitalk.Singleton.IAcaiMakerSingleton;
+import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.*;
 
 /**
@@ -35,6 +45,7 @@ public class ComprarAcai extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup2 = new javax.swing.ButtonGroup();
+        jButton2 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jRadioButtonPequeno = new javax.swing.JRadioButton();
@@ -67,6 +78,9 @@ public class ComprarAcai extends javax.swing.JFrame {
         jTextFieldPrice = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextAreaDescription = new javax.swing.JTextArea();
+        jButton3 = new javax.swing.JButton();
+
+        jButton2.setText("jButton2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
@@ -221,6 +235,13 @@ public class ComprarAcai extends javax.swing.JFrame {
         jTextAreaDescription.setRows(5);
         jScrollPane1.setViewportView(jTextAreaDescription);
 
+        jButton3.setText("Voltar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -269,7 +290,6 @@ public class ComprarAcai extends javax.swing.JFrame {
                                             .addComponent(jCheckBoxPacoca, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jCheckBoxConfeti, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jCheckBoxGostasChocolate)))))
-                            .addComponent(enviar, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jCheckBoxManga, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jCheckBoxAbacaxi, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jCheckBoxKiwi, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -277,11 +297,17 @@ public class ComprarAcai extends javax.swing.JFrame {
                             .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(32, 32, 32)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextFieldPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 703, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(enviar, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTextFieldPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 703, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
@@ -349,9 +375,11 @@ public class ComprarAcai extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(27, 27, 27)
                         .addComponent(jLabel3)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(enviar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(enviar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton3))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(372, 372, 372)
@@ -378,7 +406,7 @@ public class ComprarAcai extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void enviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enviarActionPerformed
-        enviar();
+        enviar(); 
     }//GEN-LAST:event_enviarActionPerformed
 
     private void jTextFieldPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPriceActionPerformed
@@ -392,6 +420,11 @@ public class ComprarAcai extends javax.swing.JFrame {
     private void jCheckBoxLeiteCondensadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxLeiteCondensadoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBoxLeiteCondensadoActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        disposeAndReset();
+        
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -435,6 +468,8 @@ public class ComprarAcai extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JButton enviar;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JCheckBox jCheckBoxAbacaxi;
     private javax.swing.JCheckBox jCheckBoxBanana;
     private javax.swing.JCheckBox jCheckBoxCaramelo;
@@ -466,7 +501,7 @@ public class ComprarAcai extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextAreaDescription;
     private javax.swing.JTextField jTextFieldPrice;
     // End of variables declaration//GEN-END:variables
-
+    
     private void enviar() {
         System.out.println(selectRadio());
         int cont = 0;
@@ -540,10 +575,9 @@ public class ComprarAcai extends javax.swing.JFrame {
 
         }
         
-        
         jTextFieldPrice.setText(""+type.price()); 
         jTextAreaDescription.setText(""+type.getDesc().replaceAll("\\.", "\n"));
-
+           
     }
 
     private String selectRadio() {
@@ -623,6 +657,29 @@ public class ComprarAcai extends javax.swing.JFrame {
         }
 
         return selecionados;
+    }
+    
+    private void disposeAndReset() {
+        
+        dispose();
+        jTextAreaDescription.setText("");
+        jTextFieldPrice.setText("");
+        jCheckBoxAbacaxi.setSelected(false);
+        jCheckBoxBanana.setSelected(false);
+        jCheckBoxCaramelo.setSelected(false);
+        jCheckBoxChocolate.setSelected(false);
+        jCheckBoxConfeti.setSelected(false);
+        jCheckBoxFrutaVermelhas.setSelected(false);
+        jCheckBoxGostasChocolate.setSelected(false);
+        jCheckBoxGranola.setSelected(false);
+        jCheckBoxKiwi.setSelected(false);
+        jCheckBoxLeiteCondensado.setSelected(false);
+        jCheckBoxLeiteNinho.setSelected(false);
+        jCheckBoxManga.setSelected(false);
+        jCheckBoxMel.setSelected(false);
+        jCheckBoxMorango.setSelected(false);
+        jCheckBoxPacoca.setSelected(false);
+        jRadioButtonPequeno.setSelected(true);  
     }
 
 }

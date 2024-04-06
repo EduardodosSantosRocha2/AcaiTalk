@@ -4,7 +4,19 @@
  */
 package Windos;
 
-import com.mycompany.Acaitalk.Firebase.Conexion;
+import com.mycompany.Acaitalk.Excel.CadastroDevedor;
+import com.mycompany.Acaitalk.Excel.ListarDevedores;
+import com.mycompany.Acaitalk.Firebase.CadastroFuncionario;
+import com.mycompany.Acaitalk.Observer.EventoComemorativo;
+import com.mycompany.Acaitalk.Observer.Instagram;
+import com.mycompany.Acaitalk.Observer.Observer;
+import com.mycompany.Acaitalk.Observer.Subject;
+import java.awt.GridLayout;
+import javax.swing.*;
+import java.awt.event.*;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -16,7 +28,6 @@ public class NewJFrame extends javax.swing.JFrame {
      * Creates new form NewJFrame
      */
     public NewJFrame() {
-        Conexion.concetarFirebase();
         initComponents();
     }
 
@@ -34,6 +45,9 @@ public class NewJFrame extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
@@ -54,8 +68,13 @@ public class NewJFrame extends javax.swing.JFrame {
         jButton1.setText("Realizar Pedido");
         jButton1.setMaximumSize(new java.awt.Dimension(843, 233));
         jButton1.setPreferredSize(new java.awt.Dimension(843, 233));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("Criar Evento");
+        jButton2.setText("Cadastrar Evento");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -64,29 +83,61 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jButton3.setText("Verificar Pedido");
 
+        jButton4.setText("Cadastro Funcionario");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
+        jButton5.setText("Cadastro Devedor");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
+        jButton6.setText("Listar Devedor");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(51, 51, 51)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addGap(36, 36, 36)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
+                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
                     .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(384, Short.MAX_VALUE))
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(124, 124, 124))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(326, 326, 326)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(325, 325, 325)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton3))
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton5)
+                    .addComponent(jButton6))
                 .addGap(18, 18, 18)
-                .addComponent(jButton3))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2)
+                    .addComponent(jButton4)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -94,7 +145,7 @@ public class NewJFrame extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 397, Short.MAX_VALUE)
+                .addGap(0, 425, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
@@ -108,12 +159,54 @@ public class NewJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+       jButton2.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                openCadastroFrame();
+            }
+        });
     }//GEN-LAST:event_jButton2ActionPerformed
+    
+    CadastroFuncionario RegisterFunc = new CadastroFuncionario();
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+         RegisterFunc.setVisible(true);
+    }//GEN-LAST:event_jButton4ActionPerformed
+    CadastroDevedor RegisterDev = new CadastroDevedor();
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        RegisterDev.setVisible(true);
+    }//GEN-LAST:event_jButton5ActionPerformed
+    
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                try {
+                    ListarDevedores ListDev = new ListarDevedores();
+                    ListDev.setVisible(true);
+                } catch (IOException ex) {
+                    Logger.getLogger(ListarDevedores.class.getName()).log(Level.SEVERE, null, ex);
+                }  
+            }
+        });
+        
+        
+        
+    }//GEN-LAST:event_jButton6ActionPerformed
+    ComprarAcai compraracai = new ComprarAcai();
+    
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
+        compraracai.setVisible(true);
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
-     */
+     * */
+    CadastroEvento cadastroFrame = new CadastroEvento();
+    private void openCadastroFrame() {
+        cadastroFrame.setVisible(true);
+    }
+    
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -137,6 +230,7 @@ public class NewJFrame extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -144,12 +238,77 @@ public class NewJFrame extends javax.swing.JFrame {
                 new NewJFrame().setVisible(true);
             }
         });
+        
+        
     }
+    
+    class CadastroEvento extends JFrame {
+        public CadastroEvento() {
+            super("Cadastro Evento");
+            setSize(300, 200);
+            this.setLocationRelativeTo(null);
+
+            JLabel lblName = new JLabel("Nome:");
+            JLabel lblDate = new JLabel("Data:");
+            JLabel lblPromo = new JLabel("Promoção:");
+
+            JTextField txtName = new JTextField(20);
+            JTextField txtDate = new JTextField(20);
+            JTextField txtPromo = new JTextField(5);
+
+            JButton btnSalvar = new JButton("Salvar");
+            btnSalvar.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    salvarCadastro(txtName, txtDate, txtPromo);
+                }
+            });
+
+            JPanel panel = new JPanel(new GridLayout(4, 2));
+            panel.add(lblName);
+            panel.add(txtName);
+            panel.add(lblDate);
+            panel.add(txtDate);
+            panel.add(lblPromo);
+            panel.add(txtPromo);
+            panel.add(new JLabel());
+            panel.add(btnSalvar);
+
+            add(panel);
+
+        }
+
+        private void salvarCadastro(JTextField txtName, JTextField txtDate, JTextField txtPromo) {
+            
+            String name = txtName.getText();
+            String date = txtDate.getText();
+            double promo = 0.0;
+            try {
+                promo = Double.parseDouble(txtPromo.getText());
+            } catch (NumberFormatException e) {
+                System.out.println("Formato de promoção inválido");
+                return;
+            }
+            
+            
+            Subject eventoComemorativo = new EventoComemorativo();
+            Observer instagram = new Instagram();
+            eventoComemorativo.addObserver(instagram);
+
+            eventoComemorativo.setName(name);
+            eventoComemorativo.setDate(date);
+            eventoComemorativo.setDiscountPrice(promo);
+            
+        }   
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
