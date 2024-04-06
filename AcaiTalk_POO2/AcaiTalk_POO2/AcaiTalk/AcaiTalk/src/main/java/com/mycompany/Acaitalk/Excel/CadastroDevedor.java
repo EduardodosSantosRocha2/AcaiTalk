@@ -346,7 +346,7 @@ public class CadastroDevedor extends javax.swing.JFrame {
 
     private void salvarExcel(List<Devedores> devedores) {
         String nomeArquivo = JOptionPane.showInputDialog("Digite o nome do arquivo:");
-        nomeArquivo += nomeArquivo + ".xlsx";
+        nomeArquivo = nomeArquivo + ".xlsx";
         System.out.println(nomeArquivo);
         var criaArquivoExcel = new CriarArquivoExcelDevedores();
         criaArquivoExcel.criarArquivo(nomeArquivo, devedores);
