@@ -33,7 +33,8 @@ public class CriarArquivoExcelDevedores {
                 adicionarCelula(linha, 2, devedores.getDataNascimento());
                 adicionarCelula(linha, 3, devedores.getEmail());
                 adicionarCelula(linha, 4, devedores.getTelefone());
-                adicionarCelula(linha, 5, devedores.getEndereco());     
+                adicionarCelula(linha, 5, devedores.getEndereco());
+                adicionarCelula(linha, 6, devedores.getValorDivida());
             }
 
             workbook.write(outputStream);
@@ -53,6 +54,7 @@ public class CriarArquivoExcelDevedores {
         adicionarCelula(linha, 3, "Email");
         adicionarCelula(linha, 4, "Telefone");
         adicionarCelula(linha, 5, "Endereco");
+        adicionarCelula(linha, 6, "Valor Divida");   
     }
 
     private void adicionarCelula(Row linha, int coluna, String valor) {

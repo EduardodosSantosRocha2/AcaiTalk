@@ -13,5 +13,7 @@ public class Devedores {
     private String dataNascimento;
     private String email;
     private String telefone;
-    private String endereco; 
+    private String endereco;
+    private String valorDivida;
+    
 }

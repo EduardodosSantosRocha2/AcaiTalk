@@ -30,6 +30,7 @@ public class LerArquivoExcel {
                         .email(linha.getCell(3).getStringCellValue())
                         .telefone(linha.getCell(4).getStringCellValue())
                         .endereco(linha.getCell(5).getStringCellValue())
+                        .valorDivida(linha.getCell(6).getStringCellValue())
                         .build();
                 devedores.add(devedor);
                  log.info("Lendo cliente {}", devedor);

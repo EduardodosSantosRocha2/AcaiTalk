@@ -30,6 +30,7 @@ public class Menu extends javax.swing.JFrame {
      */
     public Menu() {
         initComponents();
+        this.setLocationRelativeTo(null);
         imgLabel();
     }
     
@@ -319,6 +320,8 @@ public class Menu extends javax.swing.JFrame {
             eventoComemorativo.setName(name);
             eventoComemorativo.setDate(date);
             eventoComemorativo.setDiscountPrice(promo);
+            
+            
             
         }   
     }
