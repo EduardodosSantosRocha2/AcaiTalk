@@ -52,6 +52,7 @@ com\mycompany\Acaitalk\Excel\Devedores.class
 com\mycompany\Acaitalk\Excel\CadastroDevedor.class
 Windos\ComprarAcai$4.class
 Windos\Menu.class
+com\mycompany\Acaitalk\Excel\CadastroDevedor$6.class
 com\mycompany\Acaitalk\Excel\ListarDevedores$3.class
 com\mycompany\Acaitalk\Excel\PrintArquivoExcel.class
 com\mycompany\Acaitalk\Singleton\IAcaiMakerSingleton.class

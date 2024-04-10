@@ -16,7 +16,6 @@ import javax.swing.table.DefaultTableModel;
  */
 public class CadastroDevedor extends javax.swing.JFrame {
 
-   
     List<Devedores> devedores = new ArrayList<>();
 
     public CadastroDevedor() {
@@ -132,6 +131,11 @@ public class CadastroDevedor extends javax.swing.JFrame {
         jLabel10.setText("Valor Divida:");
 
         limpar.setText("LIMPAR");
+        limpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                limparActionPerformed(evt);
+            }
+        });
 
         jButton1.setText("Voltar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -279,12 +283,12 @@ public class CadastroDevedor extends javax.swing.JFrame {
 
     private void tbDevedoresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbDevedoresMouseClicked
         int select = tbDevedores.getSelectedRow();
-        jTextFieldCPF.setText(tbDevedores.getValueAt(select,0) + "");
-        jTextFieldName.setText(tbDevedores.getValueAt(select,1) + "");
-        jTextFieldDateOfBirth.setText(tbDevedores.getValueAt(select,2) + "");
-        jTextFieldEmail.setText(tbDevedores.getValueAt(select,3) + "");
-        jTextFieldPhone.setText(tbDevedores.getValueAt(select,4) + "");
-        jTextFieldAddress.setText(tbDevedores.getValueAt(select,5) + "");
+        jTextFieldCPF.setText(tbDevedores.getValueAt(select, 0) + "");
+        jTextFieldName.setText(tbDevedores.getValueAt(select, 1) + "");
+        jTextFieldDateOfBirth.setText(tbDevedores.getValueAt(select, 2) + "");
+        jTextFieldEmail.setText(tbDevedores.getValueAt(select, 3) + "");
+        jTextFieldPhone.setText(tbDevedores.getValueAt(select, 4) + "");
+        jTextFieldAddress.setText(tbDevedores.getValueAt(select, 5) + "");
     }//GEN-LAST:event_tbDevedoresMouseClicked
 
     private void adicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adicionarActionPerformed
@@ -301,6 +305,10 @@ public class CadastroDevedor extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void limparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limparActionPerformed
+        clear();
+    }//GEN-LAST:event_limparActionPerformed
 
     /**
      * @param args the command line arguments
@@ -368,8 +376,8 @@ public class CadastroDevedor extends javax.swing.JFrame {
 
         devedores.add(new Devedores(
                 jTextFieldCPF.getText(), jTextFieldName.getText(),
-                jTextFieldDateOfBirth.getText(), jTextFieldEmail.getText(), 
-                jTextFieldPhone.getText(), jTextFieldAddress.getText(),jTextFieldDebt.getText()));
+                jTextFieldDateOfBirth.getText(), jTextFieldEmail.getText(),
+                jTextFieldPhone.getText(), jTextFieldAddress.getText(), jTextFieldDebt.getText()));
 
     }
 
@@ -380,10 +388,10 @@ public class CadastroDevedor extends javax.swing.JFrame {
         var criaArquivoExcel = new CriarArquivoExcelDevedores();
         criaArquivoExcel.criarArquivo(nomeArquivo, devedores);
     }
-    
-    private void carregarTabelaFuncionario(JTable table){
-        
-        DefaultTableModel model = new  DefaultTableModel();
+
+    private void carregarTabelaFuncionario(JTable table) {
+
+        DefaultTableModel model = new DefaultTableModel();
         model.addColumn("CPF");
         model.addColumn("Nome");
         model.addColumn("Data Nascimento");
@@ -391,19 +399,34 @@ public class CadastroDevedor extends javax.swing.JFrame {
         model.addColumn("Telefone");
         model.addColumn("Endereço");
         model.addColumn("Valor Divida");
-        
-        
+
         for (Devedores devedor : devedores) {
             model.addRow(new Object[]{
-                  devedor.getCPF(),
-                  devedor.getNome(),
-                  devedor.getDataNascimento(),
-                  devedor.getEmail(),
-                  devedor.getTelefone(),
-                  devedor.getEndereco(),
-                  devedor.getValorDivida()
-           }); 
-        }       
+                devedor.getCPF(),
+                devedor.getNome(),
+                devedor.getDataNascimento(),
+                devedor.getEmail(),
+                devedor.getTelefone(),
+                devedor.getEndereco(),
+                devedor.getValorDivida()
+            });
+        }
         table.setModel(model);
     }
+
+    private void clear() {
+    DefaultTableModel model = (DefaultTableModel) tbDevedores.getModel();
+    model.setRowCount(0);
+    devedores.clear();
+
+    jTextFieldCPF.setText("");
+    jTextFieldName.setText("");
+    jTextFieldDateOfBirth.setText("");
+    jTextFieldEmail.setText("");
+    jTextFieldPhone.setText("");
+    jTextFieldAddress.setText("");
+    jTextFieldDebt.setText("");
+}
+
+
 }
